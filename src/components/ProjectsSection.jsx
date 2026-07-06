@@ -1,3 +1,9 @@
+// import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+
+
+import { ArrowRight } from "lucide-react";
+
 const projects = [
   {
     id: 1,
@@ -5,7 +11,7 @@ const projects = [
     description: "Amaizing leaflet project",
     image: "/projects/map.png",
     tags: ["Leaflet", "Javascript", "HTML", "CSS"],
-    demoUrl: "#",
+    demoUrl: "https://levan-s-map-by-using-leaflet.vercel.app/",
     githubUrl: "#",
   },
   {
@@ -14,7 +20,7 @@ const projects = [
     description: "Amaizing shopping project",
     image: "/projects/shopping.png",
     tags: ["React", "Javascript", "HTML", "CSS"],
-    demoUrl: "#",
+    demoUrl: "https://shoppingapp-nine.vercel.app/cart",
     githubUrl: "#",
   },
   {
@@ -23,7 +29,7 @@ const projects = [
     description: "Amaizing news project",
     image: "/projects/leo news.png",
     tags: ["Jquery", "Javascript", "HTML", "CSS"],
-    demoUrl: "#",
+    demoUrl: "https://levansarajishvili.github.io/Leo-News/",
     githubUrl: "#",
   },
 ];
@@ -59,8 +65,25 @@ export const ProjectsSection = () => {
                     ))}
                  </div>
               </div>
+
+              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+              <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+              <div className="flex justify-between items-center">
+                <div className="flex space-x-3">
+
+                  <a href={project.demoUrl} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                       <ExternalLink size={20} />
+                  </a>
+                </div>
+              </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <a href="https://github.com/Levansarajishvili?tab=repositories" target="_blank" className="cosmic-button w-fit flex items-center mx-auto">
+            Check My Github <ArrowRight size={16} />
+          </a>
         </div>
       </div>
     </section>
